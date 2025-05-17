@@ -1,6 +1,6 @@
 ## Data Preparation
-1. Download the Kuairec dataset and place the raw files in `data/raw/`.
-2. The EDA notebook will load these files and output cleaned CSVs in `data/clean/`.
+1. Download the Kuairec dataset.
+2. The EDA notebook will load these files and output cleaned CSVs in `processed_data/`.
 
 ## Usage
 
@@ -10,9 +10,7 @@ This notebook covers:
 - **Quick Data Inspection**: Initial look at dimensions and missing values  
 - **Data Cleaning**: Handling missing values, formatting, and consistency checks  
 - **Data Analysis per File**: Univariate and bivariate analyses, including a “Big Matrix” overview  
-- **Clean Data Saving**: Exporting cleaned data to `data/clean/`  
-
-_To run:_ open `notebooks/eda.ipynb` in Jupyter and execute all cells. Verify that `data/clean/` contains `users.csv`, `videos.csv`, and `interactions.csv`.
+- **Clean Data Saving**: Exporting cleaned data to `processed_data/`  
 
 ### 2. Feature Engineering & Model Development (`feature_engineering_and_model.ipynb`)
 This notebook assumes you have already run the EDA notebook. It covers:
@@ -34,8 +32,6 @@ This notebook assumes you have already run the EDA notebook. It covers:
 - **Top-K Evaluation Prep**: Formatting data for ranking metrics  
 - **Final Evaluation**: Computing NDCG, Precision@K, Recall@K and comparing to baseline  
 
-_To run:_ open `notebooks/feature_engineering_and_model.ipynb` in Jupyter and execute all cells. Trained models and metric reports will be saved under `outputs/`.
-
 ## Results
-- Trained model files are stored in `outputs/models/`.  
-- Evaluation metrics (NDCG, Precision@K, Recall@K) are available in `outputs/metrics/`.  
+- Trained model files are stored in root.  
+- Evaluation metrics (NDCG, Precision@K, Recall@K) are available at the end of the notebook.  
